@@ -1,0 +1,59 @@
+We would like to invite you to present the following case, on a yt to be decided date and time.
+
+
+
+Our Sales Team is working on assessing how good our product is performing on different regions, to come up with improvements. Hence they are appointing region specialists to provide them with some key insights and suggestions on what they can do better. You have been
+
+assigned the following region (Unfortunately you have no access to any database):
+
+
+- 1011 Stadsdeel Binnenstad (https://www.thuisbezorgd.nl/en/order-takeaway-amsterdam-stadsdeel-binnenstad-1011)
+
+
+Write a bot / scraper to collect the data from the above mentioned link and compute the following KPIs:
+
+
+
+The distribution of delivery fees being charged by different restaurants in that area
+
+Minimum, maximum and average delivery times for the region
+
+Determining the number of zip codes (restaurant location) delivering to that delivery area
+
+Determining which food cuisine gets the maximum number of reviews overall in this region.
+
+
+(Hint:If a restaurant has multiple cuisines, you can add the number of reviews to all the cuisines. Eg. If restaurant X has Thai and Mexican cuisines and has 50 reviews, then
+
+				Total Thai reviews = (Current Total) Thai reviews + 50
+
+				Total Mexican reviews = (Current Total) Mexican reviews + 50)
+
+
+      5. Bonus A: How many of the restaurants have a website being listed to the customer
+
+
+                         (Hint: There is a “I” Info part on the pages)
+
+
+      6. Bonus B: Determine a (global platform independent) unique ID for each listed restaurant, get latitude and longitude for the location of each (Tip: Google APIs)
+
+Your solution must
+Be implemented (and automated) in Java (using threads if required)
+
+Have proper exception handling / logging for bullet proof runs not missing records
+
+Be expressive, reusable, and contain clean code.
+
+Contain remarks / comments on those parts (optimization) where you could speed up execution and / or save network traffic to get all information rapidly (Hint: Use as less requests as possible)
+
+
+It would be good if your solution would:
+Be scalable for the following scenarios:
+
+If we want to add more regions for insights in the future
+
+If we want to run it at a higher frequency (like parallel in a cluster)
+
+Describe the tools used to query it and the format to store it
+

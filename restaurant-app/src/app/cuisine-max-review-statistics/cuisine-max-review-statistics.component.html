@@ -1,0 +1,20 @@
+<h4>Cuisine with max. reviews</h4>
+<form #f="ngForm" (ng-submit)="submit(f.value)"  class="form-horizontal">
+  <div class="row">
+    <div class="form-group col-md-12">
+      <div class="col-md-3">
+        <label class="col-md-5 control-label">Cuisine max. reviewed: {{cuisineMaxReviewed}} </label>
+      </div>
+    </div>
+  </div>
+  
+  <br>
+  <div class="row">
+    <div class="form-group col-md-12">
+      <div class="col-md-3">
+        <label class="col-md-5 control-label">Cuisine review nr.: {{cuisineReviewNr}} </label>
+      </div>
+    </div>
+  </div>
+  <hr>
+</form>

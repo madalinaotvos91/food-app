@@ -1,0 +1,26 @@
+<div class="table-responsive">
+  <table class="table table-hover table-striped table-sortable">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>ZipCode</th>
+      <th>Cuisines</th>
+      <th>Website</th>
+      <th>Delivery cost</th>
+      <th>Delivery time</th>
+      <th>Review count</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr  *ngFor="let restaurant of restaurantList | async">
+      <td>{{restaurant.name}}</td>
+      <td>{{restaurant.zipCode}}</td>
+      <td>{{restaurant.cuisines}}</td>
+      <td>{{restaurant.hasWebsite}}</td>
+      <td>{{restaurant.deliveryCost}}</td>
+      <td>{{restaurant.deliveryTime}}</td>
+      <td>{{restaurant.reviewCount}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

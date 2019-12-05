@@ -1,0 +1,39 @@
+<h4>Delivery fees distribution</h4>
+<form #f="ngForm" (ng-submit)="submit(f.value)"  class="form-horizontal">
+  <div class="row">
+    <div class="form-group col-md-12">
+      <div class="col-md-3">
+        <label class="col-md-5 control-label">Distinct number of zip codes:  {{totalNumberOfZipCodes}}</label>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="form-group col-md-12">
+      <div class="col-md-3">
+        <label class="col-md-5 control-label">Zip codes: </label>
+        <select (change)="getDistribution(zipCode)"  type="text" [(ngModel)] ="zipCode" name="zipCode" class="form-control input-sm">
+          <option *ngFor="let zipCode of zipCodes " value= {{zipCode}}> {{zipCode}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="form-group col-md-12">
+      <div class="col-md-3">
+        <label class="col-md-5 control-label">Delivery fees distribution:  {{deliveryDistribution}}</label>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="form-group col-md-12">
+      <div class="col-md-3">
+        <label class="col-md-5 control-label">Nr. of restaurants delivering in {{zipCode}} :  {{deliveryCountByZipCode}}</label>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+</form>

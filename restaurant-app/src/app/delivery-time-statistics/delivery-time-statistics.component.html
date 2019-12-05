@@ -1,0 +1,27 @@
+<h4>Delivery times</h4>
+<form #f="ngForm" (ng-submit)="submit(f.value)"  class="form-horizontal">
+  <div class="row">
+    <div class="form-group col-md-12">
+      <div class="col-md-3">
+        <label class="col-md-5 control-label">Min. delivery time: {{minDeliveryTime}} </label>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="form-group col-md-12">
+      <div class="col-md-3">
+        <label class="col-md-5 control-label">Avg. delivery time:  {{avgDeliveryTime}}</label>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="form-group col-md-12">
+      <div class="col-md-3">
+        <label class="col-md-5 control-label">Max. delivery time:  {{maxDeliveryTime}}</label>
+      </div>
+    </div>
+  </div>
+  <hr>
+</form>
