@@ -10,7 +10,7 @@ It has two projects frontend (restaurant-app) and backend, root of app folder.
 * Maven version 3.6.0 or above see [install Maven](https://maven.apache.org/install.html).
 
 ### Fetching the project
-Open a terminal and execute ```git clone https://github.com/madalinaotvos91/restaurant-app.git```
+Open a terminal and execute ```git clone https://github.com/madalinaotvos91/food-app.git```
 ### Execute steps
 ##### Backend
 The file ```pom.xml``` contains the project dependencies.
