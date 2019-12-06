@@ -14,15 +14,15 @@ import java.util.List;
 /**
  * Class that converts Html to Java Object Item, restaurant in Html, in java Item.
  * */
-public class HtmlToItemObject{
+public class HtmlToItem {
 
-    private  final static Logger log = Logger.getLogger(HtmlToItemObject.class);
+    private  final static Logger log = Logger.getLogger(HtmlToItem.class);
     private  Element item;
 
     /**
      * Element in html, named detailswrapper that contains the restaurant data.
      * */
-    public HtmlToItemObject(Element details) {
+    public HtmlToItem(Element details) {
         this.item = details;
     }
 
@@ -78,7 +78,7 @@ public class HtmlToItemObject{
     /**
      * Function to retrieve the zip code from div.pickup.hidden.wrapper-open-distance -> span
      * */
-    protected String getZipCode(Element item) {
+     String getZipCode(Element item) {
         try {
             Element zipCode = item.select("div.pickup.hidden.wrapper-open-distance").select("span").first();
             String zipCodeStr = zipCode.text().replaceAll(", ", "");
@@ -148,7 +148,7 @@ public class HtmlToItemObject{
      * Function to retrieve the cuisines list of html restaurant, from div.kitchens.
      * */
     protected List<String> getCuisines(Element detailsElement){
-        List<String> cuisines = Arrays.asList(detailsElement.select("div.kitchens").first().text().split(","));
+        List<String> cuisines = Arrays.asList(detailsElement.select("div.kitchens").first().text().split("\\s*,\\s*"));
         log.info("cuisines -> " + cuisines);
         return (cuisines!= null) ? cuisines : new ArrayList<>();
     }

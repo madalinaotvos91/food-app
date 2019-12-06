@@ -11,7 +11,8 @@ export class RestaurantService {
 
 //URL for retrieving the certificate list
 private baseUrl = 'http://localhost:8080/api';
-private region = 'https://www.thuisbezorgd.nl/en/order-takeaway-amsterdam-stadsdeel-binnenstad-1011';
+private region = "index.html";
+//'https://www.thuisbezorgd.nl/en/order-takeaway-amsterdam-stadsdeel-binnenstad-1011';
   constructor(private http: HttpClient) { }
   getRestaurantList() : Observable<any>{
    let params = new HttpParams();
